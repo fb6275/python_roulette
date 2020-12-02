@@ -49,10 +49,7 @@ while keep_playing: # while we keep playing, we ask the player on what number he
 
     # we generate a random number with the function randrange
     win_num = random.randrange(50)
-    if win_num % 2 == 0: # if the generate number is even
-      win_color = True
-    else:
-      win_color = False
+    
     print(f"Rien ne va plus. Faites vos jeux ! La roulette tourne... le numéro gagnant est : {win_num} ! ")
 
     # results
