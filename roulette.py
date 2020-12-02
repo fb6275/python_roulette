@@ -60,7 +60,7 @@ while keep_playing: # while we keep playing, we ask the player on what number he
         bet = ceil(bet * 0.5) # the player take back half of the bet
         print(f"C'est la bonne couleur, mais pas le bon numéro. Vous obtenez {bet} €")
         player_money += bet
-    else: #if they are not the same color and wrong number
+    else: # if they are not the same color and wrong number
         print("Mince...raté, vous perdez entièrement votre mise.")
         player_money -= bet
 
