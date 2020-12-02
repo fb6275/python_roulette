@@ -59,9 +59,8 @@ while keep_playing: # while we keep playing, we ask the player on what number he
     if win_num == num_bet: # if same number
         print(f"Félicitations, c'est gagné ! Vous obtenez {bet * 3} € !")
         player_money += bet * 3
-    elif num_color == False and win_color == False or num_color == True and win_color == True:
-        # keep going if wrong number odd or even, if even, print
-        bet = ceil(bet * 0.5)
+    elif win_num % 2 == num_bet % 2:  # if they are the same color
+        bet = ceil(bet * 0.5) # the player take back half of the bet
         print(f"C'est la bonne couleur, mais pas le bon numéro. Vous obtenez {bet} €")
         player_money += bet
     else: #if they are not the same color and wrong number
