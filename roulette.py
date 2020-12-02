@@ -56,14 +56,15 @@ while keep_playing: # while we keep playing, we ask the player on what number he
     print(f"Rien ne va plus. Faites vos jeux ! La roulette tourne... le numéro gagnant est : {win_num} ! ")
 
     # results
-    if win_num == num_bet:
+    if win_num == num_bet: # if same number
         print(f"Félicitations, c'est gagné ! Vous obtenez {bet * 3} € !")
         player_money += bet * 3
-    elif win_num % 2 == num_bet % 2: # if they are the same color
+    elif num_color == False and win_color == False or num_color == True and win_color == True:
+        # keep going if wrong number odd or even, if even, print
         bet = ceil(bet * 0.5)
         print(f"C'est la bonne couleur, mais pas le bon numéro. Vous obtenez {bet} €")
         player_money += bet
-    else: #if they are not the same color
+    else: #if they are not the same color and wrong number
         print("Mince...raté, vous perdez entièrement votre mise.")
         player_money -= bet
 
