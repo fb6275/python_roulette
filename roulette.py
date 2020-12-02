@@ -35,7 +35,7 @@ while keep_playing: # while we keep playing, we ask the player on what number he
     bet = 0
     while bet <= 0 or bet > player_money:
         bet = input("Combien voulez-vous miser ? ")
-        # convert the bet in int, like de number
+        # convert the bet in int, like the number
         try:
             bet = int(bet)
         except ValueError: # if return ValueError, print message and get back to the beginning
